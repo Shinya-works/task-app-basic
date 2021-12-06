@@ -16,10 +16,6 @@ textarea {
   resize: vertical;
 }
 
-.header {
-  background-color: teal;
-}
-
 .center {
   text-align: center;
 }
@@ -76,6 +72,33 @@ p {
 #logo:hover {
   color: gray;
   text-decoration: none;
+}
+
+#top {
+  font-weight: bolder;
+  color: white;
+}
+
+#top:hover {
+  color: gray;
+}
+
+#user {
+  font-weight: bolder;
+  color: white;
+}
+
+#user:hover {
+  color: gray;
+}
+
+#log-in {
+  font-weight: bolder;
+  color: white;
+}
+
+#log-in:hover {
+  color: gray;
 }
 
 /* デバッグウインドウ */
