@@ -4,8 +4,28 @@
 /* 共通 */
 
 
+
 body {
   padding-top: 60px;
+}
+.container {
+    padding-right: 15
+px
+;
+    padding-left: 15
+px
+;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+div {
+  display: block;
 }
 
 section {
@@ -74,31 +94,37 @@ p {
   text-decoration: none;
 }
 
-#top {
+.header-list {
+  font-weight: bolder;
+  color: white !important;
+  &:hover {
+    color: gray !important;
+    background-color: teal;
+  }
+}
+
+#dropdown-title {
   font-weight: bolder;
   color: white;
-}
-
-#top:hover {
+  background-color: teal;
+  &:hover {
   color: gray;
+  }
 }
 
-#user {
+/* トップページ*/
+.guide {
+  color: gray;
+  background-color: #ddd;
+}
+
+#top-main {
+  background-color: white;
+}
+
+#top-main-title {
+  font-style: italic;
   font-weight: bolder;
-  color: white;
-}
-
-#user:hover {
-  color: gray;
-}
-
-#log-in {
-  font-weight: bolder;
-  color: white;
-}
-
-#log-in:hover {
-  color: gray;
 }
 
 /* デバッグウインドウ */
