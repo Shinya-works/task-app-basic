@@ -1,0 +1,31 @@
+<% provide(:title, current_user.name) %>
+<h1><%= current_user.name %>のタスク一覧</h1>
+<div class="row">
+  <div class="container">
+    <div class="col-md-10 col-md-offset-1">
+      <%= link_to "タスク新規作成", tasks_path, class: "btn btn-lg btn-primary pull-right" %>
+        <table class="table table-hover", id="table-task">
+          <thead>
+            <tr>
+              <th>名称</th>
+              <th>作成日</th>
+              <th></th>
+            </th>
+          </thead>
+          
+          <tdody>
+            <% @tasks.each do |task| %>
+              <tr>
+                <td><%= link_to task.name, task %>, </td>
+                <td><%= task.created_at %></td>
+                <td>
+                  <%= link_to"編集", "#", class: "btn btn-success" %> 
+                  <%= link_to"削除", '#', class: "btn btn-danger" %> 
+                </td>
+              </tr>
+            <% end %>
+          </tdody>
+        </table>
+    </div>
+  </div>
+</div>
