@@ -1,3 +1,23 @@
-// Place all the styles related to the Tasks controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* タスク一覧ページ*/
+#table-tasks td {
+  vertical-align: middle !important;
+}
+
+.tasks-name {
+  font-weight: bolder;
+}
+
+/*タスク新規作成ページ*/
+.btn-task-create {
+  margin-top: 10px;
+}
+
+/*タスク編集ページ*/
+text_area.form-control{
+  height: auto;
+  resize: vertical !important;
+}
+
+.btn-task--edit {
+  margin-top: 10px;
+}

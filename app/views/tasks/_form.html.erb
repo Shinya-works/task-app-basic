@@ -1,0 +1,11 @@
+    <%= form_with(model: @task, local: true) do |f| %>
+      <%= render 'shared/error_messages', boject: @task %>
+      
+      <%= f.label :name, class: "label-#{yield(:class_text)}" %>
+      <%= f.text_field :name, class: "form-control" %>
+
+      <%= f.label :deteil, class: "label-#{yield(:class_text)}" %>
+      <%= f.text_area :deteil, rows: 5, class: "form-control" %>
+
+      
+    <% end %>

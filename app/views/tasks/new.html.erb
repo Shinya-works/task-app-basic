@@ -1,0 +1,14 @@
+<% provide(:title, 'New Task') %>
+<% provide(:class_text, 'task-create') %>
+
+<h1>タスク新規作成</h1>
+
+<div class="row">
+  <div class="col-md-8 col-md-offset-2">
+    <%= render 'form' %>
+    <%= form_with(model: @task, local: true) do |f| %>
+      <%= render 'shared/error_messages', boject: @task %>
+      <%= f.submit "更新", class: "btn btn-md btn-primary pullbtn-block btn-task-create" %>
+    <% end %>
+  </div>
+</div>
