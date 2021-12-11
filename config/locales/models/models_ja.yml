@@ -11,12 +11,10 @@ ja:
         password-confirmation: パスワード再入力
         created_at: 作成日
         update_at: 更新日
-      
-    models:
-      task: タスク
-    attributes:
-      id: ID
-      name: 名称
-      deteil: 詳細
-      created_at: 作成日
-      update_at: 更新日
+      task: 
+        id: ID
+        name: 名称
+        deteil: 詳細
+        created_at: 作成日
+        update_at: 更新日
+

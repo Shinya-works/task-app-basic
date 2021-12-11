@@ -1,23 +1,22 @@
-/* タスク一覧ページ*/
-#table-tasks td {
-  vertical-align: middle !important;
-}
-
-.tasks-name {
-  font-weight: bolder;
-}
-
-/*タスク新規作成ページ*/
-.btn-task-create {
-  margin-top: 10px;
-}
-
-/*タスク編集ページ*/
+// 共通
 text_area.form-control{
   height: auto;
   resize: vertical !important;
 }
 
-.btn-task--edit {
+// タスク詳細ページ
+#table-task th {
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+}
+
+// タスク編集ページ
+.btn-form {
+  margin-top: 10px;
+}
+
+// タスク新規作成ページ
+.btn-task-create {
   margin-top: 10px;
 }
