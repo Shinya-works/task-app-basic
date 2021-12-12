@@ -13,7 +13,8 @@ class TasksController < ApplicationController
     end
     
     def create
-      if @task = Task.create(task_params)
+      @task = Task.new(task_params)
+      if @task.save
         flash[:success] = "タスクの新規作成に成功しました。"
         redirect_to @task
       else

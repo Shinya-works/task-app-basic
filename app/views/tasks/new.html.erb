@@ -1,5 +1,4 @@
 <% provide(:title, 'New Task') %>
-<% provide(:class_text, 'task-create') %>
 
 <h1>タスク新規作成</h1>
 
@@ -7,6 +6,7 @@
   <div class="col-md-8 col-md-offset-2">
     <%= form_with(model: @task, local: true) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
+      
       <%= f.label :name, class: "label-task-create" %>
       <%= f.text_field :name, class: "form-control" %>
       <%= f.label :deteil, class: "label-task-create" %>
