@@ -4,6 +4,16 @@ text_area.form-control{
   resize: vertical !important;
 }
 
+
+/*タスク一覧*/
+#table-tasks th {
+  vertical-align: middle;
+}
+
+#table-tasks td {
+  vertical-align: middle;
+}
+
 // タスク詳細ページ
 #table-task {
   table-layout: fixed;
