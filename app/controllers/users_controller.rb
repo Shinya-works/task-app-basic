@@ -63,4 +63,12 @@ class UsersController < ApplicationController
         redirect_to login_url
       end
     end
+    
+    # 現在のログインしているユーザーが管理者か確認
+    def admin_user?
+      unless current_user.admin?
+        flash[:danger] = "あなたは管理者ではありません"
+        redirect_to root_url
+      end
+    end
 end
