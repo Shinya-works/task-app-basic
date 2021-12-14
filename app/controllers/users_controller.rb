@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+  # ログイン済みのユーザーか確認
   
   def create
     @user = User.new(user_params)
@@ -45,11 +46,21 @@ class UsersController < ApplicationController
   
   private
   
+    # ストロングパラメータcreate、updateを許可する
     def user_params
       params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
     
+    # それぞれのユーザー情報を代入
     def set_user
       @user = User.find(params[:id])
     end 
+    
+    # ログイン済みのユーザーか確認
+    def logged_in_user?
+      unless logged_in?
+        flash[:danger] = "ログインしてください。"
+        redirect_to login_url
+      end
+    end
 end
