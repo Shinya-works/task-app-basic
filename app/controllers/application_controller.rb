@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   
    # それぞれのユーザー情報を代入
     def set_user
-      @user = User.find(params[:id])
+      @user = User.find(params[:user_id])
     end 
     
     # ログイン済みのユーザーか確認
@@ -16,6 +16,14 @@ class ApplicationController < ActionController::Base
       end
     end
     
+    # ログイン規制
+    def log_in_regulation
+      if logged_in?
+        flash[:success] = "すでにログインしています。"
+        redirect_to current_user
+      end
+    end
+    
     # 現在のログインしているユーザーが管理者か確認
     def admin_user
         redirect_to root_url unless current_user.admin?
@@ -23,7 +31,7 @@ class ApplicationController < ActionController::Base
     
     # ログインユーザー本人の確認
     def correct_user
-      @user = User.find(params[:id])
+      @User = User.find(current_user.id)
       redirect_to root_url unless current_user?(@user)
     end
     

@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
   
+  before_action :log_in_regulation, only: [ :new, :create]
+  
   def new
   end
   

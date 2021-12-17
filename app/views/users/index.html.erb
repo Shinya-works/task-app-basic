@@ -18,7 +18,7 @@
            <td><%= link_to user.name, user %><span class="label label-primary label-division">管理者</span></td>
            <% else %>
            <td><%= link_to user.name, user %><span class="label label-success label-division">一般</span></td>
-           <td><%= link_to "削除", user_path(user.id), method: :DELETE, date: { confirm: "削除してよろしいですか。"}, class: "btn btn-sm btn-danger pull-right" %></td>
+           <td><%= link_to "削除", user_path(user.id), method: :DELETE, data: { confirm: "削除してよろしいですか？" }, class: "btn btn-sm btn-danger pull-right" %></td>
            <% end %>
            
          </tr>

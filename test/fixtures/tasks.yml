@@ -2,10 +2,10 @@
 
 one:
   name: MyString
-  deteil: MyString
+  detail: MyString
   user: one
 
 two:
   name: MyString
-  deteil: MyString
+  detail: MyString
   user: two
