@@ -4,6 +4,11 @@ class ApplicationController < ActionController::Base
   
    # それぞれのユーザー情報を代入
     def set_user
+      @user = User.find(params[:id])
+    end 
+    
+    # それぞれのユーザーを設定
+    def set_user_id
       @user = User.find(params[:user_id])
     end 
     
@@ -33,6 +38,15 @@ class ApplicationController < ActionController::Base
     def correct_user
       @User = User.find(current_user.id)
       redirect_to root_url unless current_user?(@user)
+    end
+    
+    # ユーザー本人以外のタスク編集措置
+    def correct_user_edit
+      @User = User.find(current_user.id)
+      unless current_user?(@user)
+        flash[:danger] = "編集権限がありません"
+        redirect_to user_tasks_url(current_user.id) 
+      end
     end
     
     # 管理者またはログインユーザー本人であるかの確認
